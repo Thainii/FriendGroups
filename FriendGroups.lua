@@ -150,17 +150,16 @@ local function GetFriendInfoById(id)
 			isFavoriteFriend = accountInfo.isFavorite
 			bnetAccountId = accountInfo.bnetAccountID
 			isAFK = accountInfo.isAFK
-			isGameAFK = accountInfo.isGameAFK
 			isDND = accountInfo.isDND
-			isGameBusy = accountInfo.isGameBusy
-			mobile = accountInfo.isWowMobile
-			zoneName = accountInfo.areaName
 			lastOnline = accountInfo.lastOnlineTime
 
 			local gameAccountInfo = accountInfo.gameAccountInfo
 
 			if gameAccountInfo then
 				isOnline = gameAccountInfo.isOnline
+				isGameAFK = gameAccountInfo.isGameAFK
+				isGameBusy = gameAccountInfo.isGameBusy
+				mobile = gameAccountInfo.isWowMobile
 				characterName = gameAccountInfo.characterName
 				class = gameAccountInfo.className
 				level = gameAccountInfo.characterLevel
